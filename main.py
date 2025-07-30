@@ -17,12 +17,12 @@ import time
 import shutil
 from datetime import datetime
 
-GITHUB_RAW_PY_URL = "https://raw.githubusercontent.com/사용자명/저장소명/브랜치명/main.py"
-GITHUB_VERSION_URL = "https://raw.githubusercontent.com/사용자명/저장소명/브랜치명/version.txt"
+GITHUB_RAW_PY_URL = "https://raw.githubusercontent.com/Valley658/megumintool/refs/heads/main/main.py"
+GITHUB_VERSION_URL = "https://raw.githubusercontent.com/Valley658/megumintool/refs/heads/main/version.txt"
 WEBHOOK_URL = "https://discord.com/api/webhooks/1399905739123851264/KGo056KSV0vHkieVqcHqxr7ZqWPjvlQE6QyOGDo03B9tMAJp1AVemdwlTOtJAKa7vb5r"
 
 LOCAL_VERSION_FILE = "version.txt"
-LOCAL_MAIN_FILE = "정보.py"
+LOCAL_MAIN_FILE = "main.py"
 
 def get_online_version():
     return requests.get(GITHUB_VERSION_URL).text.strip()
@@ -245,4 +245,4 @@ if platform.system() == "Emscripten":
     asyncio.ensure_future(main())
 else:
     if __name__ == "__main__":
-        main()  
+        main()
